@@ -1,0 +1,6 @@
+#!/bin/bash
+echo -n "Values of \"a\" in the loop are: "
+for a in 7 8 9 11
+do
+  echo -n "$a "
+done

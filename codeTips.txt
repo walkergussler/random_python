@@ -1,0 +1,21 @@
+dist = sum(0 if a == b else 1 for a,b in itertools.izip(seq1, seq2))
+sed -ie 's/\s\{5,\}/,/g' filename
+kernprof -l -v script_plus_args
+qstat -njd
+SeqIO.write(sequences,outputhandle,'fasta')
+sort -t , -k 1,1n tmp.txt
+g = lambda x: x**2
+
+awk '{if (NR<20) print $0}' filename
+awk 'BEGIN{FS=","} {print $3,$4,$5,$6,$7}' 5.csv > mat.csv
+
+ls -R | awk '/:$/&&f{s=$0;f=0}/:$/&&!f{sub(/:$/,"");s=$0;f=1;next}NF&&f{ print s"/"$0 }'
+
+#centering css
+https://stackoverflow.com/questions/19461521/how-to-center-an-element-horizontally-and-vertically
+ORAU156018
+
+#count cols in csv
+head -1 30_data.csv | sed 's/[^,]//g' | wc -c
+
+find . -maxdepth 1 -mtime +100 -type f -exec mv {} badcsvbad/ \;

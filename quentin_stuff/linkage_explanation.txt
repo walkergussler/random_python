@@ -1,0 +1,18 @@
+A (n-1) by 4 matrix Z is returned. At the i-th iteration, clusters with indices Z[i, 0] and Z[i, 1] are combined to form cluster n+i. A cluster with an index less than n corresponds to one of the n original observations. The distance between clusters Z[i, 0] and Z[i, 1] is given by Z[i, 2]. The fourth value Z[i, 3] represents the number of original observations in the newly formed cluster.
+
+%   The output matrix Z contains cluster information. Z has size m-1 by 3,
+%   where m is the number of observations in the original data. Column 1
+%   and 2 of Z contain cluster indices linked in pairs to form a binary
+%   tree. The leaf nodes are numbered from 1 to m. They are the singleton
+%   clusters from which all higher clusters are built. Each newly-formed
+%   cluster, corresponding to Z(i,:), is assigned the index m+i, where m is
+%   the total number of initial leaves. Z(i,1:2) contains the indices of
+%   the two component clusters which form cluster m+i. There are m-1 higher
+%   clusters which correspond to the interior nodes of the output
+%   clustering tree. Z(i,3) contains the corresponding linkage distances
+%   between the two clusters which are merged in Z(i,:), e.g. if there are
+%   total of 30 initial nodes, and at step 12, cluster 5 and cluster 7 are
+%   combined and their distance at this time is 1.5, then row 12 of Z will
+%   be (5,7,1.5). The newly formed cluster will have an index 12+30=42. If
+%   cluster 42 shows up in a latter row, that means this newly formed
+%   cluster is being combined again into some bigger cluster.
